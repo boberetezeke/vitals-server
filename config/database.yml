@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username:
+  host: localhost
+
+development:
+  <<: *default
+  database: vitals_server_development
+
+test:
+  <<: *default
+  database: vitals_server_test
+
+production:
+  <<: *default
+  database: vitals_server_production
